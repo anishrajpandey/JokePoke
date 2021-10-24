@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/JokePoke/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/JokePoke/static/js/main.1dcad74d.chunk.js",
-    "main.js.map": "/JokePoke/static/js/main.1dcad74d.chunk.js.map",
+    "main.js": "/JokePoke/static/js/main.6001b2c8.chunk.js",
+    "main.js.map": "/JokePoke/static/js/main.6001b2c8.chunk.js.map",
     "runtime-main.js": "/JokePoke/static/js/runtime-main.8f07f95a.js",
     "runtime-main.js.map": "/JokePoke/static/js/runtime-main.8f07f95a.js.map",
     "static/js/2.b65d202b.chunk.js": "/JokePoke/static/js/2.b65d202b.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8f07f95a.js",
     "static/js/2.b65d202b.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.1dcad74d.chunk.js"
+    "static/js/main.6001b2c8.chunk.js"
   ]
 }
