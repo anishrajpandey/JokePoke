@@ -1,0 +1,2 @@
+(this.webpackJsonpjokeapp=this.webpackJsonpjokeapp||[]).push([[0],{9:function(e,t,c){"use strict";c.r(t);var n=c(1),r=c.n(n),s=c(3),a=c.n(s),j=c(0);var o=function(){return Object(j.jsx)(j.Fragment,{children:Object(j.jsx)("div",{className:"test",children:" Hello, i have just started the project"})})};a.a.render(Object(j.jsx)(r.a.StrictMode,{children:Object(j.jsx)(o,{})}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.7e10cb92.chunk.js.map
