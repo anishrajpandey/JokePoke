@@ -1,10 +1,12 @@
+import react, { useState, useEffect } from "react";
+import JokeItem from "./components/JokeItem";
 function App() {
   return (
     <>
-      <div className="test"> Hello, i have just started the project today.</div>
-      <h1>YOU WILL FIND JOKES HERE ONCE I BUILD THIS</h1>
+      <JokeItem />
+      <JokeItem />
+      <JokeItem />
     </>
   );
 }
-
 export default App;
