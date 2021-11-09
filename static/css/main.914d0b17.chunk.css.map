@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/style.css"],"names":[],"mappings":"AAAA,YACE,UAAW,CAEX,gBAAiB,CACjB,sBAAuB,CACvB,YACF","file":"main.914d0b17.chunk.css","sourcesContent":["div.JokeBox {\r\n  width: 50vw;\r\n  /* background-color: green; */\r\n  font-size: 1.5rem;\r\n  font-family: sans-serif;\r\n  height: 200px;\r\n}\r\n"]}
