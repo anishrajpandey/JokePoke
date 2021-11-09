@@ -1,0 +1,58 @@
+div.JokeBox {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-size: 1.5rem;
+  background-image: url(./assets/pexels-gradienta-7130560.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  height: 420px;
+  margin: 100px 85px;
+  border: 2px dotted #000;
+  border-radius: 20px;
+}
+div.heading {
+  height: 50px;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding-top: 20px;
+  font-weight: bolder;
+}
+div.mainjoke {
+  height: 260px, fit-content;
+}
+div.mainjoke > img {
+  margin: 30px 40%;
+}
+div.mainjoke > div {
+  padding: 50px 180px;
+  font-size: 1.8rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+button.btn-primary {
+  position: absolute;
+  top: 67%;
+  right: 43%;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  outline: 0;
+  border: 0;
+  background-color: rgb(212, 16, 252);
+}
+button.btn-primary:hover {
+  transform: scale(1.1);
+
+  transition: 200ms;
+}
+h3 {
+  margin: 0 335px;
+  width: auto;
+}
