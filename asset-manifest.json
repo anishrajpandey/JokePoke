@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/JokePoke/static/css/main.914d0b17.chunk.css",
-    "main.js": "/JokePoke/static/js/main.89592a55.chunk.js",
-    "main.js.map": "/JokePoke/static/js/main.89592a55.chunk.js.map",
+    "main.css": "/JokePoke/static/css/main.b6f485d6.chunk.css",
+    "main.js": "/JokePoke/static/js/main.55735152.chunk.js",
+    "main.js.map": "/JokePoke/static/js/main.55735152.chunk.js.map",
     "runtime-main.js": "/JokePoke/static/js/runtime-main.934076b4.js",
     "runtime-main.js.map": "/JokePoke/static/js/runtime-main.934076b4.js.map",
-    "static/js/2.2e9ca0d6.chunk.js": "/JokePoke/static/js/2.2e9ca0d6.chunk.js",
-    "static/js/2.2e9ca0d6.chunk.js.map": "/JokePoke/static/js/2.2e9ca0d6.chunk.js.map",
+    "static/js/2.824df0f9.chunk.js": "/JokePoke/static/js/2.824df0f9.chunk.js",
+    "static/js/2.824df0f9.chunk.js.map": "/JokePoke/static/js/2.824df0f9.chunk.js.map",
     "index.html": "/JokePoke/index.html",
-    "static/css/main.914d0b17.chunk.css.map": "/JokePoke/static/css/main.914d0b17.chunk.css.map",
-    "static/js/2.2e9ca0d6.chunk.js.LICENSE.txt": "/JokePoke/static/js/2.2e9ca0d6.chunk.js.LICENSE.txt",
-    "static/media/loader.67d87764.svg": "/JokePoke/static/media/loader.67d87764.svg"
+    "static/css/main.b6f485d6.chunk.css.map": "/JokePoke/static/css/main.b6f485d6.chunk.css.map",
+    "static/js/2.824df0f9.chunk.js.LICENSE.txt": "/JokePoke/static/js/2.824df0f9.chunk.js.LICENSE.txt",
+    "static/media/loader.67d87764.svg": "/JokePoke/static/media/loader.67d87764.svg",
+    "static/media/style.css": "/JokePoke/static/media/pexels-gradienta-7130560.ded1801e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.934076b4.js",
-    "static/js/2.2e9ca0d6.chunk.js",
-    "static/css/main.914d0b17.chunk.css",
-    "static/js/main.89592a55.chunk.js"
+    "static/js/2.824df0f9.chunk.js",
+    "static/css/main.b6f485d6.chunk.css",
+    "static/js/main.55735152.chunk.js"
   ]
 }
