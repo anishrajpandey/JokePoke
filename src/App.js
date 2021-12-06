@@ -2,7 +2,6 @@ import react, { useState } from "react";
 import JokeItem from "./components/JokeItem";
 import "./components/style.css";
 import settinglogo from "./components/assets/settings.png";
-// document.body.style.background = " red ";
 
 function App() {
   const [Theme, setTheme] = useState(true);
@@ -38,8 +37,85 @@ function App() {
             </svg>
           </div>
           <div className="settings">
-            <img src={settinglogo} alt="Settings" />
+            <img
+              src={settinglogo}
+              alt="Settings"
+              style={Theme ? { filter: "invert(1)" } : null}
+            />
           </div>
+        </div>
+        <div className="menu">
+          <div className="category">
+            <span>Category</span>
+
+            <div>
+              <input type="checkbox" defaultChecked id="programming" />
+              <label htmlFor="programming"></label>
+              <span className="item">Programming</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Miscellaneous" />
+              <label HTMLFor="Miscellaneous"></label>
+              <span className="item">Miscellaneous</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Dark" />
+              <label htmlFor="Dark"></label>
+              <span className="item">Dark</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Pun" />
+              <label htmlFor="Pun"></label>
+              <span className="item">Pun</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Spooky" />
+              <label htmlFor="Spooky"></label>
+              <span className="item">Spooky</span>
+            </div>
+          </div>
+          <div className="flags">
+            <span>Flags to Blacklist</span>
+
+            <div>
+              <input type="checkbox" id="Religious" />
+              <label htmlFor="Religious"></label>
+              <span className="item">Religious</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Political" />
+              <label HTMLFor="Political"></label>
+              <span className="item">Political</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Racist" />
+              <label htmlFor="Racist"></label>
+              <span className="item">Racist</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Explicit" />
+              <label htmlFor="Explicit"></label>
+              <span className="item">Explicit</span>
+            </div>
+          </div>
+          <div className="jokepart">
+            <span>Joke type</span>
+            <div>
+              <input type="checkbox" id="Single" />
+              <label htmlFor="Single"></label>
+              <span className="item">Single</span>
+            </div>
+            <div>
+              <input type="checkbox" id="Double" />
+              <label htmlFor="Double"></label>
+              <span className="item">Two Part</span>
+            </div>
+          </div>
+          <div className="words">
+            <span>Word to Include</span>
+            <input type="text" placeholder="Enter a word" />
+          </div>
+          <button className="apply">Apply</button>
         </div>
       </div>
       <JokeItem category="Any" />
