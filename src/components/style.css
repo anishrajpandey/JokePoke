@@ -1,17 +1,27 @@
+body.darkStyle {
+  background: linear-gradient(90deg, rgb(12, 14, 29) 0%, rgb(27, 39, 41) 100%);
+  background-size: cover;
+  color: white;
+}
+body.lightStyle {
+  background: linear-gradient(
+    90deg,
+    rgb(214, 219, 255) 0%,
+    rgb(190, 178, 199) 100%
+  );
+  background-size: cover;
+}
 div.JokeBox {
   display: flex;
   flex-direction: column;
   width: 80%;
   font-size: 1.5rem;
-  background-image: url(./assets/pexels-gradienta-7130560.jpg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   font-family: sans-serif;
-  height: 420px;
-  margin: 100px 85px;
-  border: 2px dotted #000;
+  min-height: 420px;
+  margin: 150px 85px;
+  border: 2px dotted grey;
   border-radius: 20px;
+  color: inherit;
 }
 div.heading {
   height: 50px;
@@ -21,31 +31,34 @@ div.heading {
   font-weight: bolder;
 }
 div.mainjoke {
-  height: 260px, fit-content;
+  /* min-height: 200px; */
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
 }
-div.mainjoke > img {
-  margin: 30px 40%;
-}
+
 div.mainjoke > div {
-  padding: 50px 180px;
+  padding: 50px 80px;
   font-size: 1.8rem;
 }
 .navbar {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   width: 70%;
 }
 button.btn-primary {
-  position: absolute;
-  top: 67%;
-  right: 43%;
   width: 200px;
   height: 50px;
   border-radius: 20px;
   outline: 0;
   border: 0;
-  background-color: rgb(212, 16, 252);
+  background-color: rgba(25, 255, 255, 0.76);
+}
+.btnarea {
+  display: flex;
+  justify-content: center;
 }
 button.btn-primary:hover {
   transform: scale(1.1);
@@ -55,4 +68,35 @@ button.btn-primary:hover {
 h3 {
   margin: 0 335px;
   width: auto;
+}
+.customizeArea .settings img {
+  width: 50px;
+  aspect-ratio: 1;
+}
+.customizeArea {
+  background: red;
+  display: flex;
+  justify-content: flex-end;
+}
+.customizeArea .settings,
+.customizeArea .theme {
+  display: inline-block;
+  cursor: pointer;
+}
+.customizeArea .settings img::selection {
+  background-color: none;
+}
+div.options {
+  /* background-color: green; */
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 13px;
+  }
+  div.JokeBox {
+    margin: 150px 20px;
+  }
 }
