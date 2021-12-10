@@ -94,16 +94,18 @@ div.options {
   justify-content: space-around;
 }
 div.menu {
-  background-color: palevioletred;
+  background-color: rgb(127, 9, 13);
+  padding: 20px;
+  border-radius: 23px;
   position: absolute;
-  top: 80px;
+  top: 100px;
   z-index: 45;
   height: 500px;
   width: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 250px 250px;
-  display: none;
+  display: var(--displayValue);
 }
 .category {
   margin-left: 10px;
@@ -117,6 +119,7 @@ div.menu {
   font-weight: 900;
   font-family: sans-serif;
 }
+
 .menu > .words input {
   height: 50px;
   outline: 0;
@@ -136,6 +139,8 @@ button.apply {
   height: 50px;
   font-weight: bold;
   background: cadetblue;
+  border-radius: 12px;
+  cursor: grabbing;
 }
 @media screen and (max-width: 540px) {
   html {
@@ -144,4 +149,12 @@ button.apply {
   div.JokeBox {
     margin: 150px 20px;
   }
+  div.menu {
+    width: 400px;
+  }
 }
+/* @media screen and (max-width: 300px) {
+  div.menu {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100px);
+    /* height: auto; */

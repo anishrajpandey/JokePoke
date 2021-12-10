@@ -1,11 +1,27 @@
-import react, { useState } from "react";
+import react, { useState, useEffect } from "react";
 import JokeItem from "./components/JokeItem";
 import "./components/style.css";
 import settinglogo from "./components/assets/settings.png";
 
 function App() {
   const [Theme, setTheme] = useState(true);
+  const [Done, setDone] = useState(false);
 
+  const [Category, setCategory] = useState("Any");
+
+  const [Flags, setFlags] = useState("");
+  const [JokeType, setJokeType] = useState("");
+  const [Word, setWord] = useState("");
+
+  const [Block, setBlock] = useState(false);
+
+  useEffect(() => {
+    if (Block) {
+      document.documentElement.style.setProperty("--displayValue", "grid");
+    } else {
+      document.documentElement.style.setProperty("--displayValue", "none");
+    }
+  }, [Done]);
   return (
     <>
       <div className="customizeArea">
@@ -41,84 +57,188 @@ function App() {
               src={settinglogo}
               alt="Settings"
               style={Theme ? { filter: "invert(1)" } : null}
+              onClick={() => {
+                setBlock(!Block);
+                console.log(Block);
+                if (Block) {
+                  document.documentElement.style.setProperty(
+                    "--displayValue",
+                    "none"
+                  );
+                } else {
+                  document.documentElement.style.setProperty(
+                    "--displayValue",
+                    "grid"
+                  );
+                }
+              }}
             />
           </div>
         </div>
         <div className="menu">
           <div className="category">
             <span>Category</span>
+            <form action="./backend.py">
+              <div>
+                <label htmlFor="a">
+                  <input
+                    type="radio"
+                    defaultChecked
+                    name=""
+                    id="a"
+                    name="option"
+                    onClick={(e) => {
+                      e.target.checked ? setCategory("Any") : setCategory("");
+                    }}
+                  />
+                  <span className="item">All</span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="programming">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="programming"
+                    value="Programming"
+                    onClick={(e) => {
+                      e.target.checked
+                        ? setCategory("Programming")
+                        : setCategory("");
+                    }}
+                  />
+                  <span className="item">Programming</span>
+                </label>
+              </div>
+              <div>
+                <label HTMLFor="Miscellaneous">
+                  <input
+                    type="radio"
+                    id="Miscellaneous"
+                    name="option"
+                    onClick={(e) => {
+                      e.target.checked
+                        ? setCategory("Miscellaneous")
+                        : setCategory("");
+                    }}
+                  />
+                  <span className="item">Miscellaneous</span>
+                </label>
+              </div>
 
-            <div>
-              <input type="checkbox" defaultChecked id="programming" />
-              <label htmlFor="programming"></label>
-              <span className="item">Programming</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Miscellaneous" />
-              <label HTMLFor="Miscellaneous"></label>
-              <span className="item">Miscellaneous</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Dark" />
-              <label htmlFor="Dark"></label>
-              <span className="item">Dark</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Pun" />
-              <label htmlFor="Pun"></label>
-              <span className="item">Pun</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Spooky" />
-              <label htmlFor="Spooky"></label>
-              <span className="item">Spooky</span>
-            </div>
+              <div>
+                <label htmlFor="Dark">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="Dark"
+                    onClick={(e) => {
+                      e.target.checked ? setCategory("Dark") : setCategory("");
+                    }}
+                  />
+                  <span className="item">Dark</span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="Pun">
+                  <input
+                    name="option"
+                    type="radio"
+                    id="Pun"
+                    onClick={(e) => {
+                      e.target.checked ? setCategory("Pun") : setCategory("");
+                    }}
+                  />
+                  <span className="item">Pun</span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="Spooky">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="Spooky"
+                    onClick={(e) => {
+                      e.target.checked
+                        ? setCategory("Spooky")
+                        : setCategory("");
+                    }}
+                  />
+                  <span className="item">Spooky</span>
+                </label>
+              </div>
+            </form>
           </div>
+
           <div className="flags">
-            <span>Flags to Blacklist</span>
+            <span>Safe Mode</span>
+            <div>
+              <label htmlFor="choice2">
+                <input
+                  type="radio"
+                  defaultChecked
+                  name="choice"
+                  id="choice2"
+                  onClick={(e) => {
+                    e.target.checked
+                      ? setFlags(
+                          "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+                        )
+                      : setFlags("");
+                  }}
+                />
+                <span className="item">On</span>
+              </label>
+            </div>
 
             <div>
-              <input type="checkbox" id="Religious" />
-              <label htmlFor="Religious"></label>
-              <span className="item">Religious</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Political" />
-              <label HTMLFor="Political"></label>
-              <span className="item">Political</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Racist" />
-              <label htmlFor="Racist"></label>
-              <span className="item">Racist</span>
-            </div>
-            <div>
-              <input type="checkbox" id="Explicit" />
-              <label htmlFor="Explicit"></label>
-              <span className="item">Explicit</span>
+              <label htmlFor="choice1">
+                <input
+                  type="radio"
+                  name="choice"
+                  id="choice1"
+                  onClick={(e) => {
+                    e.target.checked
+                      ? setFlags("")
+                      : setFlags(
+                          "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+                        );
+                  }}
+                />
+                <span className="item">Off</span>
+              </label>
             </div>
           </div>
           <div className="jokepart">
             <span>Joke type</span>
             <div>
-              <input type="checkbox" id="Single" />
-              <label htmlFor="Single"></label>
-              <span className="item">Single</span>
+              <label htmlFor="Single">
+                <input type="checkbox" id="Single" />
+                <span className="item">Single</span>
+              </label>
             </div>
             <div>
-              <input type="checkbox" id="Double" />
-              <label htmlFor="Double"></label>
-              <span className="item">Two Part</span>
+              <label htmlFor="Double">
+                <input type="checkbox" id="Double" />
+                <span className="item">Two Part</span>
+              </label>
             </div>
           </div>
           <div className="words">
             <span>Word to Include</span>
             <input type="text" placeholder="Enter a word" />
           </div>
-          <button className="apply">Apply</button>
+          <button
+            className="apply"
+            onClick={() => {
+              console.log(document.getElementById("btn"));
+            }}
+          >
+            Apply
+          </button>
         </div>
       </div>
-      <JokeItem category="Any" />
+      <JokeItem category={Category} flags={Flags} />
     </>
   );
 }

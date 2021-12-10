@@ -16,12 +16,12 @@ export default function JokeItem(props) {
   const [joke, setJoke] = useState("");
   const [Fetch, setFetch] = useState(true);
   const [Loading, setLoading] = useState(false);
+  const URL = `https://v2.jokeapi.dev/joke/${props.category}${props.flags}`;
   useEffect(() => {
+    console.log(URL);
     const getJoke = async () => {
       setLoading(true);
-      const jokeData = await fetch(
-        `https://v2.jokeapi.dev/joke/${props.category}`
-      );
+      const jokeData = await fetch(URL);
       setLoading(false);
 
       const jokeObj = await jokeData.json();
