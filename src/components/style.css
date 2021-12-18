@@ -10,6 +10,14 @@ body.lightStyle {
   background: rgb(214, 219, 255);
   transition: 1.3s;
 }
+div.logoArea img {
+  position: absolute;
+  left: -30px;
+  top: -30px;
+  width: 150px;
+  aspect-ratio: 1;
+  mix-blend-mode: lighten;
+}
 div.JokeBox {
   display: flex;
   flex-direction: column;
@@ -18,7 +26,7 @@ div.JokeBox {
   font-family: sans-serif;
   min-height: 420px;
   margin: 150px 85px;
-  border: 2px dotted grey;
+  border: 2px dotted rgb(0, 150, 12);
   border-radius: 20px;
   color: inherit;
 }
@@ -30,7 +38,6 @@ div.heading {
   font-weight: bolder;
 }
 div.mainjoke {
-  /* min-height: 200px; */
   display: flex;
   justify-content: center;
   height: auto;
@@ -46,27 +53,37 @@ button.btn-primary {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  border: 2px solid red;
-
+  border: 2px solid rgb(0, 150, 12);
+  position: relative;
   background-color: transparent;
   transition: 100ms;
   font-weight: bolder;
-  font-size: 1.2 rem;
+  font-size: 1.2rem;
   color: inherit;
+  cursor: pointer;
+  overflow: hidden;
+}
+button.btn-primary::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 55px;
+  left: -59px;
+  top: -4px;
+  transform: skew(-45deg);
+  background-color: rgb(0, 150, 12);
+  z-index: 13;
+  transition: 300ms;
+}
+button.btn-primary:hover::after {
+  left: 215px;
 }
 
-button.btn-primary:hover {
-  box-shadow: 0 0 15px 8px rgb(255, 0, 34);
-}
 .btnarea {
   display: flex;
   justify-content: center;
 }
-button.btn-primary:hover {
-  transform: scale(1.1);
 
-  transition: 200ms;
-}
 h3 {
   margin: 0 335px;
   width: auto;
@@ -88,13 +105,12 @@ h3 {
   background-color: none;
 }
 div.options {
-  /* background-color: green; */
   width: 150px;
   display: flex;
   justify-content: space-around;
 }
 div.menu {
-  background-color: rgb(127, 9, 13);
+  background-color: rgb(23, 105, 30);
   padding: 20px;
   border-radius: 23px;
   position: absolute;
@@ -106,6 +122,7 @@ div.menu {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 250px 250px;
   display: var(--displayValue);
+  color: black;
 }
 .category {
   margin-left: 10px;
@@ -138,7 +155,8 @@ button.apply {
   margin-right: -60px;
   height: 50px;
   font-weight: bold;
-  background: cadetblue;
+  background: rgb(124, 0, 0);
+  color: white;
   border-radius: 12px;
   cursor: grabbing;
 }
@@ -152,9 +170,7 @@ button.apply {
   div.menu {
     width: 400px;
   }
+  div.JokeBox div.jokeText {
+    margin: 0 -67px;
+  }
 }
-/* @media screen and (max-width: 300px) {
-  div.menu {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 100px);
-    /* height: auto; */

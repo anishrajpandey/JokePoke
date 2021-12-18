@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import loadingLogo from "./loader.svg";
-// import { themelogo } from "./assets/theme.png";
 
 function repeatstringnumtimes(str, num) {
   var repeatedstring = "";
   for (let i = 0; i < num; i++) {
     repeatedstring = repeatedstring + str;
   }
-
   return repeatedstring;
 }
 
@@ -16,7 +14,7 @@ export default function JokeItem(props) {
   const [joke, setJoke] = useState("");
   const [Fetch, setFetch] = useState(true);
   const [Loading, setLoading] = useState(false);
-  const URL = `https://v2.jokeapi.dev/joke/${props.category}${props.flags}`;
+  const URL = `https://v2.jokeapi.dev/joke/${props.category}${props.flags}${props.part}${props.word}`;
   useEffect(() => {
     console.log(URL);
     const getJoke = async () => {
@@ -45,7 +43,9 @@ export default function JokeItem(props) {
           {Loading ? (
             <img src={loadingLogo} alt="loading" />
           ) : (
-            <div>{!Array.isArray(joke) ? joke : joke[0] + joke[2]}</div>
+            <div className="jokeText">
+              {!Array.isArray(joke) ? joke : joke[0] + joke[2]}
+            </div>
           )}
         </div>
 
@@ -56,7 +56,7 @@ export default function JokeItem(props) {
               setFetch(!Fetch);
             }}
           >
-            Another One
+            Next Joke
           </button>
         </div>
       </div>

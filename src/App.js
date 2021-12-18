@@ -2,6 +2,7 @@ import react, { useState, useEffect } from "react";
 import JokeItem from "./components/JokeItem";
 import "./components/style.css";
 import settinglogo from "./components/assets/settings.png";
+import logo from "./components/assets/download.png";
 
 function App() {
   const [Theme, setTheme] = useState(true);
@@ -9,7 +10,9 @@ function App() {
 
   const [Category, setCategory] = useState("Any");
 
-  const [Flags, setFlags] = useState("");
+  const [Flags, setFlags] = useState(
+    "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+  );
   const [JokeType, setJokeType] = useState("");
   const [Word, setWord] = useState("");
 
@@ -24,6 +27,9 @@ function App() {
   }, [Done]);
   return (
     <>
+      <div className="logoArea">
+        <img src={logo} alt="logo" />
+      </div>
       <div className="customizeArea">
         <div className="options">
           <div
@@ -84,7 +90,6 @@ function App() {
                   <input
                     type="radio"
                     defaultChecked
-                    name=""
                     id="a"
                     name="option"
                     onClick={(e) => {
@@ -111,7 +116,7 @@ function App() {
                 </label>
               </div>
               <div>
-                <label HTMLFor="Miscellaneous">
+                <label htmlFor="Miscellaneous">
                   <input
                     type="radio"
                     id="Miscellaneous"
@@ -212,33 +217,76 @@ function App() {
           <div className="jokepart">
             <span>Joke type</span>
             <div>
+              <label htmlFor="anyPart">
+                <input
+                  defaultChecked
+                  type="radio"
+                  id="anyPart"
+                  name="part"
+                  onClick={(e) => (e.target.checked ? setJokeType("") : null)}
+                />
+                <span className="item">Any</span>
+              </label>
+            </div>
+            <div>
               <label htmlFor="Single">
-                <input type="checkbox" id="Single" />
+                <input
+                  type="radio"
+                  id="Single"
+                  name="part"
+                  onClick={(e) =>
+                    e.target.checked
+                      ? setJokeType("?type=single")
+                      : setCategory("")
+                  }
+                />
                 <span className="item">Single</span>
               </label>
             </div>
             <div>
               <label htmlFor="Double">
-                <input type="checkbox" id="Double" />
+                <input
+                  type="radio"
+                  id="Double"
+                  name="part"
+                  onClick={(e) =>
+                    e.target.checked
+                      ? setJokeType("?type=double")
+                      : setCategory("")
+                  }
+                />
                 <span className="item">Two Part</span>
               </label>
             </div>
           </div>
           <div className="words">
             <span>Word to Include</span>
-            <input type="text" placeholder="Enter a word" />
+            <input
+              type="text"
+              placeholder="Enter a word"
+              onChange={(e) => {
+                e.target.value == ""
+                  ? setWord("")
+                  : setWord(`&contains=${e.target.value}`);
+                console.log(e.target.value);
+              }}
+            />
           </div>
           <button
             className="apply"
             onClick={() => {
-              console.log(document.getElementById("btn"));
+              document.documentElement.style.setProperty(
+                "--displayValue",
+                "none"
+              );
+              setBlock(false);
             }}
           >
             Apply
           </button>
         </div>
       </div>
-      <JokeItem category={Category} flags={Flags} />
+      <JokeItem category={Category} flags={Flags} part={JokeType} word={Word} />
     </>
   );
 }
