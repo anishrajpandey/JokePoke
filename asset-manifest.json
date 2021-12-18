@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/JokePoke/static/css/main.b082667c.chunk.css",
-    "main.js": "/JokePoke/static/js/main.cc7c88aa.chunk.js",
-    "main.js.map": "/JokePoke/static/js/main.cc7c88aa.chunk.js.map",
+    "main.css": "/JokePoke/static/css/main.67a821e5.chunk.css",
+    "main.js": "/JokePoke/static/js/main.82b4432f.chunk.js",
+    "main.js.map": "/JokePoke/static/js/main.82b4432f.chunk.js.map",
     "runtime-main.js": "/JokePoke/static/js/runtime-main.934076b4.js",
     "runtime-main.js.map": "/JokePoke/static/js/runtime-main.934076b4.js.map",
-    "static/js/2.e1a69e8b.chunk.js": "/JokePoke/static/js/2.e1a69e8b.chunk.js",
-    "static/js/2.e1a69e8b.chunk.js.map": "/JokePoke/static/js/2.e1a69e8b.chunk.js.map",
+    "static/js/2.824df0f9.chunk.js": "/JokePoke/static/js/2.824df0f9.chunk.js",
+    "static/js/2.824df0f9.chunk.js.map": "/JokePoke/static/js/2.824df0f9.chunk.js.map",
     "index.html": "/JokePoke/index.html",
-    "static/css/main.b082667c.chunk.css.map": "/JokePoke/static/css/main.b082667c.chunk.css.map",
-    "static/js/2.e1a69e8b.chunk.js.LICENSE.txt": "/JokePoke/static/js/2.e1a69e8b.chunk.js.LICENSE.txt",
+    "static/css/main.67a821e5.chunk.css.map": "/JokePoke/static/css/main.67a821e5.chunk.css.map",
+    "static/js/2.824df0f9.chunk.js.LICENSE.txt": "/JokePoke/static/js/2.824df0f9.chunk.js.LICENSE.txt",
     "static/media/loader.67d87764.svg": "/JokePoke/static/media/loader.67d87764.svg",
     "static/media/settings.168bd09a.png": "/JokePoke/static/media/settings.168bd09a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.934076b4.js",
-    "static/js/2.e1a69e8b.chunk.js",
-    "static/css/main.b082667c.chunk.css",
-    "static/js/main.cc7c88aa.chunk.js"
+    "static/js/2.824df0f9.chunk.js",
+    "static/css/main.67a821e5.chunk.css",
+    "static/js/main.82b4432f.chunk.js"
   ]
 }
