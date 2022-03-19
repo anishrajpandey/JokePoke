@@ -110,7 +110,8 @@ div.options {
   justify-content: space-around;
 }
 div.menu {
-  background-color: rgb(23, 105, 30);
+  background-color: rgb(133, 151, 228);
+  outline: 4px groove lime;
   padding: 20px;
   border-radius: 23px;
   position: absolute;
