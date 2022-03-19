@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/JokePoke/static/css/main.67a821e5.chunk.css",
-    "main.js": "/JokePoke/static/js/main.82b4432f.chunk.js",
-    "main.js.map": "/JokePoke/static/js/main.82b4432f.chunk.js.map",
+    "main.css": "/JokePoke/static/css/main.ac013a67.chunk.css",
+    "main.js": "/JokePoke/static/js/main.f0ee96f1.chunk.js",
+    "main.js.map": "/JokePoke/static/js/main.f0ee96f1.chunk.js.map",
     "runtime-main.js": "/JokePoke/static/js/runtime-main.934076b4.js",
     "runtime-main.js.map": "/JokePoke/static/js/runtime-main.934076b4.js.map",
     "static/js/2.824df0f9.chunk.js": "/JokePoke/static/js/2.824df0f9.chunk.js",
     "static/js/2.824df0f9.chunk.js.map": "/JokePoke/static/js/2.824df0f9.chunk.js.map",
     "index.html": "/JokePoke/index.html",
-    "static/css/main.67a821e5.chunk.css.map": "/JokePoke/static/css/main.67a821e5.chunk.css.map",
+    "static/css/main.ac013a67.chunk.css.map": "/JokePoke/static/css/main.ac013a67.chunk.css.map",
     "static/js/2.824df0f9.chunk.js.LICENSE.txt": "/JokePoke/static/js/2.824df0f9.chunk.js.LICENSE.txt",
     "static/media/loader.67d87764.svg": "/JokePoke/static/media/loader.67d87764.svg",
     "static/media/settings.168bd09a.png": "/JokePoke/static/media/settings.168bd09a.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.934076b4.js",
     "static/js/2.824df0f9.chunk.js",
-    "static/css/main.67a821e5.chunk.css",
-    "static/js/main.82b4432f.chunk.js"
+    "static/css/main.ac013a67.chunk.css",
+    "static/js/main.f0ee96f1.chunk.js"
   ]
 }
